@@ -1,18 +1,14 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import Form from "react-bootstrap/Form";
-import Container from "react-bootstrap/Container";
+
 import "../App.css";
 import { useHistory } from "react-router-dom";
-import { Home } from "./Home";
-import useFetch from "./useFetch";
-import { Post } from "./Post";
+
 import toast, { Toaster } from "react-hot-toast";
-import Usernames from "./Usernames";
+
 import usernamess from "./Usernames";
 const AddPost = (props) => {
-  const history = useHistory();
+  
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [username, setUsername] = useState("");
@@ -29,7 +25,7 @@ const AddPost = (props) => {
     e.preventDefault();
 
     setUsername(usernamess[Math.floor(Math.random() * usernamess.length)]);
-    var tp = usernamess[Math.floor(Math.random() * usernamess.length)];
+    
     console.log(username);
     var pasta = { title, content, username };
 

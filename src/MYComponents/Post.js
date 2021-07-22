@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { AddPost } from "./AddPost";
+
 import toast, { Toaster } from 'react-hot-toast';
 
 const Post = (props) => {

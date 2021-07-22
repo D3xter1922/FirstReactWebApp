@@ -2,12 +2,12 @@ import React from "react";
 import { Post } from "./Post";
 export const PostFeed = (props) => {
 
-  var posts = props.posts;
-  const changeBtnText = (id) => {
-    posts = props.posts.filter((data) => {
-      return data.id!==id;
-    })
-  }
+  // var posts = props.posts;
+  // const changeBtnText = (id) => {
+  //   posts = props.posts.filter((data) => {
+  //     return data.id!==id;
+  //   })
+  // }
   
   return (
     <div className = "mt-3">

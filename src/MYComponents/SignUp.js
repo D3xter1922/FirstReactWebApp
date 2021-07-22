@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import {Link, navlink} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const SignUp = () => {
   const [type, setType] = useState("password");
@@ -118,7 +118,7 @@ const SignUp = () => {
               
               onChange={(e) => {
                 
-                if (e.target.value == password) {
+                if (e.target.value === password) {
                   setMessage2("");
                   setStyle2(greenStyle);
                 } else {
@@ -127,7 +127,7 @@ const SignUp = () => {
                 }
               }}
             />
-            <div id="emailHelp" className="form-text" style2={style}>
+            <div id="emailHelp" className="form-text" style2={style2}>
               {message2}
             </div>
           </div>

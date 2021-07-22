@@ -1,9 +1,9 @@
 import "./App.css";
 import Header from "./MYComponents/Header";
 import { Home } from "./MYComponents/Home";
-import { PostFeed } from "./MYComponents/PostFeed";
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import toast, { Toaster } from "react-hot-toast";
+
 import SignIn from "./MYComponents/SignIn";
 import SignUp from "./MYComponents/SignUp";
 function App() {

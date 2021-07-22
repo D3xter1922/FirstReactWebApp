@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { Link, navlink } from "react-router-dom";
+import { Link } from "react-router-dom";
 const SignIn = () => {
   const [type, setType] = useState("password");
   const [password, setPassword] = useState("");
@@ -43,7 +43,7 @@ const SignIn = () => {
               required
               type="email"
               className="form-control"
-              id="exampleInputEmail1"
+              
               aria-describedby="emailHelp"
               value={email}
               onChange={(e) => {

@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { AddPost } from "./AddPost";
+import { useState } from "react";
+
 
 const useFetch = (url) => {
   const [data, setData] = useState(null);

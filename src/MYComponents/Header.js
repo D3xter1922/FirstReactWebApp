@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types'
-import { Link, navlink } from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function Header(props) {
   return (
     <div>
@@ -37,7 +37,7 @@ export default function Header(props) {
                   className="nav-link"
                   to="/SignUp"
                   tabIndex="-1"
-                  
+                   
                 >
                   Sign Up
                 </Link>
