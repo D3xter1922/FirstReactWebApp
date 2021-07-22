@@ -17,6 +17,7 @@ export const Home = () => {
     setUpdated(!updated);
   };
   useEffect(() => {
+    
     fetchFunc();
     if (error !== null) {
       toast.error("error.message");

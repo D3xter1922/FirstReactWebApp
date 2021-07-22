@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 import "../App.css";
-import { useHistory } from "react-router-dom";
+
 
 import toast, { Toaster } from "react-hot-toast";
 
