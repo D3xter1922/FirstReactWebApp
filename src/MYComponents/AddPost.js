@@ -7,31 +7,64 @@ import "../App.css";
 import { useHistory } from "react-router-dom";
 import { Home } from "./Home";
 import useFetch from "./useFetch";
-
-export const AddPost = (props) => {
+import { Post } from "./Post";
+import toast, { Toaster } from "react-hot-toast";
+import Usernames from "./Usernames";
+import usernamess from "./Usernames";
+const AddPost = (props) => {
+  const history = useHistory();
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [username, setUsername] = useState("");
-  const history = useHistory();
+  const [btnText, setBtnText] = useState("Post");
+  const tempfun = (e) => {
+    console.log("this works", e);
+    setTitle(e.title);
+    setContent(e.content);
+    setBtnText("edit");
+  };
 
-  var temp = false;
   const PostContent = (e) => {
+    const toastID = toast.loading("loading...");
     e.preventDefault();
-    const pasta = { title, content, username };
+
+    setUsername(usernamess[Math.floor(Math.random() * usernamess.length)]);
+    var tp = usernamess[Math.floor(Math.random() * usernamess.length)];
+    console.log(username);
+    var pasta = { title, content, username };
+
     fetch("http://localhost:8000/posts", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(pasta),
-    }).then((res) => {
-      console.log("posted");
-      props.useFetchh();
-    });
-
+    })
+      .then((res) => {
+        if (res.ok) {
+          toast.success("Posted");
+        } else {
+          toast.error("failed");
+        }
+        console.log("posted");
+        props.useFetchh();
+        setTitle("");
+        setContent("");
+        setBtnText("Post");
+        toast.dismiss(toastID);
+      })
+      .catch((error) => {
+        toast.dismiss(toastID);
+        toast.error("failed to post");
+        console.error(error);
+      });
   };
+  props.changeData(tempfun);
   // const { data, isPending, error } = useFetch("http://localhost:8000/posts");
   // props.Post(data);
   return (
     <>
+      <div>
+        <Toaster />
+      </div>
       <div className="container input-form">
         <form onSubmit={PostContent}>
           <div className="mb-3">
@@ -66,10 +99,12 @@ export const AddPost = (props) => {
             ></textarea>
           </div>
           <button type="button " className="btn btn-outline-primary">
-            Post
+            {btnText}
           </button>
         </form>
       </div>
     </>
   );
 };
+
+export { AddPost };

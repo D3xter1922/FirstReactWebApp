@@ -17,7 +17,20 @@
   text-align: center;
   position: relative;
 }
-
+.edit-btn {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0px;
+  border: 0px;
+  margin:0%;
+  
+}
+.delete-btn {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0px;
+  border: 0px;
+  margin:0%;
+  
+}
 
 .App-header {
   background-color: #282c34;
@@ -34,6 +47,9 @@
   color: #61dafb;
 }
 
+.cards {
+  max-width: 70%;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -1,70 +1,10 @@
 {
   "posts": [
     {
-      "title": "YES",
-      "username": "hhh",
-      "content": "lorem",
+      "title": "asdas",
+      "content": "fgdfgsgagd",
+      "username": "eggplantmilk",
       "id": 1
-    },
-    {
-      "title": "YESYes",
-      "username": "sfe",
-      "content": "ipsum",
-      "id": 2
-    },
-    {
-      "title": "No",
-      "username": "fs",
-      "content": "sdfsfeeeasfsefssesf",
-      "id": 3
-    },
-    {
-      "title": "weq",
-      "content": "222",
-      "username": "",
-      "id": 4
-    },
-    {
-      "title": "qwe",
-      "content": "666",
-      "username": "",
-      "id": 5
-    },
-    {
-      "title": "ad",
-      "content": "55",
-      "username": "",
-      "id": 6
-    },
-    {
-      "title": "7",
-      "content": "78",
-      "username": "",
-      "id": 7
-    },
-    {
-      "title": "krish ",
-      "content": "bagga",
-      "username": "",
-      "id": 8
-    },
-    {
-      "title": "kris",
-      "content": "baga",
-      "username": "",
-      "id": 9
-    },
-    {
-      "title": "1",
-      "content": "3",
-      "username": "",
-      "id": 10
-    },
-    {
-      "title": "0",
-      "content": "0",
-      "username": "",
-      "id": 11
     }
   ]
 }

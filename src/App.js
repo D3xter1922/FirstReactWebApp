@@ -1,15 +1,29 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Header from "./MYComponents/Header";
-import {Home} from './MYComponents/Home'
+import { Home } from "./MYComponents/Home";
 import { PostFeed } from "./MYComponents/PostFeed";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
+import SignIn from "./MYComponents/SignIn";
+import SignUp from "./MYComponents/SignUp";
 function App() {
   return (
-    <Router>
-      <Header title="MYpage" />
-      <Home/>
-    </Router>
+    <div className="app-container">
+      <Router>
+        <Header title="MYpage" />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/SignIn">
+            <SignIn />
+          </Route>
+          <Route exact path="/SignUp">
+            <SignUp />
+          </Route>
+        </Switch>
+      </Router>
+    </div>
   );
 }
 
