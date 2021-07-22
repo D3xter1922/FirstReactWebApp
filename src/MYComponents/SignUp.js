@@ -150,7 +150,12 @@ const SignUp = () => {
             </label>
           </div>
           <button type="submit" className="btn btn-primary">
-              <Link to="/">Submit</Link>
+          <Link
+            to="/"
+            className="text-light"
+            style={{ textDecoration: "none" }}
+            
+          >Submit</Link>
             
           </button>
         </form>
